@@ -4,7 +4,7 @@ salesAmount = float(input('Please input the salespersons total sales for the mon
 vacationDays = float(input('Please input the number of vacation days the salesperson took in the month'))
 monthsAtcompany = float(input('Please input the number of months this salesperson has been with SoftwarePirates'))
 base_pay = 2000
-#Set up the variables for the bonuses
+#Set up vacation loss and if bonus is available
 if(vacationDays > 3):
     vacationLoss = 200
 else:
