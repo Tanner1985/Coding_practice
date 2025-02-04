@@ -24,7 +24,6 @@ def milesToKm(miles_converter):
     else:
         milToKm = miles_converter * 1.6
         print (f'William, {miles_converter} miles is {milToKm:.2f} kilometers. Quite a long shot huh?')
-        return
 #Function to check and convert Fahrenhit
 def FahToCel(fahren_converter):
     bad_counter = 0
@@ -37,7 +36,6 @@ def FahToCel(fahren_converter):
     else:
         fahrenheitToC = (fahren_converter - 32) * 5/9
         print (f'William, {fahren_converter} degrees fahrenheit is {fahrenheitToC:.2f} degrees celsius. That is so cool!')
-        return
 #Function to check and convert Gallons input    
 def GalToLit(gallons_converter):
     bad_counter = 0
@@ -50,7 +48,6 @@ def GalToLit(gallons_converter):
     else:
         gallonsToL = gallons_converter * 3.9
         print (f'William, {gallons_converter} gallons comes out to {gallonsToL:.2f} liters. Should I turn down the volume?')
-        return
 #Function to check and convert Pounds input
 def PoundsToKg(pounds_converter):
     bad_counter = 0
@@ -63,7 +60,6 @@ def PoundsToKg(pounds_converter):
     else:
         poundsToKl = pounds_converter * .45
         print (f'William, {pounds_converter} pounds turns into {poundsToKl:.2f} kilograms. That was some heavy math!')
-        return
 #Function to check and convert Inches    
 def InchesToCm(inches_converter):
     bad_counter = 0
@@ -76,6 +72,5 @@ def InchesToCm(inches_converter):
     else:
         inchesToCm = inches_converter * 2.54
         print (f'William, {inches_converter} inches is {inchesToCm:.2f} centimeters. I have no more puns, but that was fun!')
-        return
 
 main()
