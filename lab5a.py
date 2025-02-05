@@ -7,7 +7,7 @@ def main():
         miles_converter = float(input('William, please input the miles you wish to convert to kilometers'))
         bad_counter = bad_counter + 1
    if (bad_counter == 2):
-        print('Too many bad inputs. Please try again later')
+        print('Ran backwards too many times')
    else:
         milesToKm(miles_converter)
         fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius'))
@@ -17,7 +17,7 @@ def main():
             fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius'))
             bad_counter = bad_counter + 1 
         if(bad_counter == 2):
-            print('Too many bad inputs. Please try again later')
+            print('Too many fires. You may be on the sun')
         else:
             FahToCel(fahren_converter)
             gallons_converter = float(input('William, please input the gallons you wish to convert to liters'))
@@ -27,7 +27,7 @@ def main():
                 gallons_converter = float(input('William, please input the gallons you wish to convert to liters'))
                 bad_counter = bad_counter + 1 
             if(bad_counter == 2):
-                print('Too many bad inputs. Please try again later')    
+                print('Program dehydrated from too many negatives')    
             else:
                 GalToLit(gallons_converter) 
                 pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms'))
@@ -37,7 +37,7 @@ def main():
                     pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms'))
                     bad_counter = bad_counter + 1
                 if(bad_counter == 2):   
-                    print('Too many bad inputs. Please try again later')    
+                    print('Too much antigravity, now on the moon')    
                 else:
                     PoundsToKg(pounds_converter) 
                     inches_converter = float(input('William, please input the inches you wish to convert to centimeters'))
@@ -47,7 +47,7 @@ def main():
                         inches_converter = float(input('William, please input the inches you wish to convert to centimeters'))
                         bad_counter = bad_counter + 1
                     if(bad_counter == 2):    
-                        print('Too many bad inputs. Please try again later')    
+                        print('Too much shrinking, can no longer see')    
                     else:
                         InchesToCm(inches_converter)
 
