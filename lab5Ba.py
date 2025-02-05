@@ -11,7 +11,6 @@ def main():
    if (bad_counter == 2):
         print('Ran backwards too many times')
    else:
-        milesToKm(miles_converter)
         fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius'))
         bad_counter = 0
         while(fahren_converter > 1000 and bad_counter < 2):
@@ -21,7 +20,6 @@ def main():
         if(bad_counter == 2):
             print('Too many fires. You may be on the sun')
         else:
-            FahToCel(fahren_converter)
             gallons_converter = float(input('William, please input the gallons you wish to convert to liters'))
             bad_counter = 0
             while(gallons_converter < 0 and bad_counter < 2):
@@ -30,8 +28,7 @@ def main():
                 bad_counter = bad_counter + 1 
             if(bad_counter == 2):
                 print('Program dehydrated from too many negatives')    
-            else:
-                GalToLit(gallons_converter) 
+            else: 
                 pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms'))
                 bad_counter = 0
                 while(pounds_converter < 0 and bad_counter < 2):
@@ -40,8 +37,7 @@ def main():
                     bad_counter = bad_counter + 1
                 if(bad_counter == 2):   
                     print('Too much antigravity, now on the moon')    
-                else:
-                    PoundsToKg(pounds_converter) 
+                else: 
                     inches_converter = float(input('William, please input the inches you wish to convert to centimeters'))
                     bad_counter = 0
                     while(inches_converter < 0 and bad_counter < 2):
@@ -51,12 +47,10 @@ def main():
                     if(bad_counter == 2):    
                         print('Too much shrinking, can no longer see')    
                     else:
-                        InchesToCm(inches_converter)
-
-        print (f'William, {miles_converter} miles is {milToKm:.2f} kilometers. Quite a long shot huh?')
-        print (f'William, {fahren_converter} degrees fahrenheit is {fahrenheitToC:.2f} degrees celsius. That is so cool!')
-        print (f'William, {gallons_converter} gallons comes out to {gallonsToL:.2f} liters. Should I turn down the volume?')
-        print (f'William, {pounds_converter} pounds turns into {poundsToKl:.2f} kilograms. That was some heavy math!')
-        print (f'William, {inches_converter} inches is {inchesToCm:.2f} centimeters. I have no more puns, but that was fun!')
+                        print (f'William, {miles_converter} miles is {labconverter.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
+                        print (f'William, {fahren_converter} degrees fahrenheit is {labconverter.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
+                        print (f'William, {gallons_converter} gallons comes out to {labconverter.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
+                        print (f'William, {pounds_converter} pounds turns into {labconverter.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
+                        print (f'William, {inches_converter} inches is {labconverter.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
 
 main()
