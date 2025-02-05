@@ -1,6 +1,7 @@
+#Import conversion function
+import labconverter
 #Define Main function, get input and check for validity, then give to function to calculate and return converstion
 def main():
-   import conversion
    bad_counter = 0
    miles_converter = float(input('William, please input the miles you wish to convert to kilometers'))
    while(miles_converter < 0 and bad_counter < 2):
