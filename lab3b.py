@@ -41,4 +41,11 @@ else:
 #Calculate total pay
 total_pay = base_pay + commission + bonus + extraBonus - vacationLoss
 #Print the results
-print(f'{salesPerson} had total sales of {salesAmount:.2f}$ and earned the total of of {total_pay:.2f}$')
+print(f'Name: {salesPerson}')
+print(f'Time with SoftwarePirates : {monthsAtcompany} months')
+print(f'Base Salery : ${base_pay:.2f}')
+print(f'Commission Earned : ${commission:.2f}')
+print(f'Bonus Earned : ${bonus:.2f}')
+print(f'Extra Bonus Earned: ${extraBonus:.2f}')
+print(f'Deductions : ${vacationLoss:.2f}')
+print(f'Total Paycheck : ${total_pay:.2f}')
