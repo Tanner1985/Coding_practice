@@ -1,8 +1,8 @@
 #Grab input and set base pay
-salesPerson= str(input('Please enter the salespersons name'))
-salesAmount = float(input('Please input the salespersons total sales for the month'))
-vacationDays = float(input('Please input the number of vacation days the salesperson took in the month'))
-monthsAtcompany = float(input('Please input the number of months this salesperson has been with SoftwarePirates'))
+salesPerson= str(input('Please enter the salespersons name: '))
+salesAmount = float(input('Please input the salespersons total sales for the month: '))
+vacationDays = float(input('Please input the number of vacation days the salesperson took in the month: '))
+monthsAtcompany = float(input('Please input the number of months this salesperson has been with SoftwarePirates: '))
 base_pay = 2000
 #Set up vacation loss and if bonus is available
 if(vacationDays > 3):
@@ -41,11 +41,4 @@ else:
 #Calculate total pay
 total_pay = base_pay + commission + bonus + extraBonus - vacationLoss
 #Print the results
-print(f'Name: {salesPerson}')
-print(f'Time with SoftwarePirates : {monthsAtcompany} months')
-print(f'Base Salery : ${base_pay:.2f}')
-print(f'Commission Earned : ${commission:.2f}')
-print(f'Bonus Earned : ${bonus:.2f}')
-print(f'Extra Bonus Earned: ${extraBonus:.2f}')
-print(f'Deductions : ${vacationLoss:.2f}')
-print(f'Total Paycheck : ${total_pay:.2f}')
+print(f'{salesPerson} had total sales of {salesAmount:.2f}$ and earned the total of of {total_pay:.2f}$')
