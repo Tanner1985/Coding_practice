@@ -1,16 +1,11 @@
 #Functions to convert a given value to metric and return the converted number
 def InchesToCm(inches_converter):
-        convertedInchs = inches_converter * 2.54
-        return convertedInchs
+        return inches_converter * 2.54
 def PoundsToKg(pounds_converter):
-        convertedPounds = pounds_converter * .45
-        return convertedPounds
+        return pounds_converter * .45
 def GalToLit(gallons_converter):
-        convertedGals = gallons_converter * 3.9
-        return convertedGals
+        return gallons_converter * 3.9
 def FahToCel(fahren_converter):
-        convertedFah = (fahren_converter - 32) * 5/9
-        return convertedFah
+        return (fahren_converter - 32) * 5/9
 def milesToKm(miles_converter):
-        convertedMiles = miles_converter * 1.6
-        return convertedMiles
+        return miles_converter * 1.6

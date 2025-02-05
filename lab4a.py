@@ -1,4 +1,4 @@
-# Get each value for conversion and make sure they are valid
+# Get each value for conversion and make sure they are valid using a loop to allow for up to 3 attempts at the input
 miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
 bad_counter = 0
 while(miles_converter < 0 and bad_counter < 2):

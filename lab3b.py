@@ -1,15 +1,15 @@
-#Grab input and set base pay
+#Grab input for needed data and set base pay
 salesPerson= input('Please enter the salespersons name: ')
 salesAmount = float(input('Please input the salespersons total sales for the month: '))
 vacationDays = float(input('Please input the number of vacation days the salesperson took in the month: '))
 monthsAtcompany = float(input('Please input the number of months this salesperson has been with SoftwarePirates: '))
 base_pay = 2000
-#Set up vacation loss and if bonus is available
+#Check if salesperson needs a vacation deduction
 if(vacationDays > 3):
     vacationLoss = 200
 else:
     vacationLoss = 0
-    
+#Check if salesperson is eligible for a bonus    
 if(monthsAtcompany > 3):
     bonusAval = True
 else:

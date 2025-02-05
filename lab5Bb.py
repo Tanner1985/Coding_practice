@@ -2,7 +2,7 @@
 def main():
     random_number = generateRandomNumber()
     guess = int(input('This is a random number guessing game! Please enter your guess: '))
-    #Check if the guess is correct, keeping track of the number of guesses
+    #Check if the guess is correct, keeping track of the number of guesses and giving hints if within 10 of the number
     num_guesses = 0
     while(guess != random_number):
         if(guess < random_number and guess < (random_number - 10)):
@@ -17,6 +17,7 @@ def main():
             print('Error!')
         num_guesses = num_guesses + 1
         guess = int(input('Please enter your guess: '))
+    #Print the number of guesses it took to get the correct number    
     print(f'Well done! You have guessed the number in {num_guesses} guesses!')
     #Ask the user if they would like to play again
     play_again = input('Would you like to play again? (yes or no): ')

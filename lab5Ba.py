@@ -1,6 +1,6 @@
 #Import conversion function
 import labconverter
-#Define Main function, get input and check for validity, then give to function to calculate and return converstion
+#Define Main function, get input and check for validity with loops to confirm input is valid
 def main():
    bad_counter = 0
    miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
@@ -47,6 +47,7 @@ def main():
                     if(bad_counter == 2):    
                         print('Too much shrinking, can no longer see')    
                     else:
+#Print the initial values given and call imported functions to convert and print the conversions along with bad puns
                         print (f'William, {miles_converter} miles is {labconverter.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
                         print (f'William, {fahren_converter} degrees fahrenheit is {labconverter.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
                         print (f'William, {gallons_converter} gallons comes out to {labconverter.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
