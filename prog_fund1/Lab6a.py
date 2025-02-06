@@ -94,10 +94,11 @@ def selectMenu():
     print('4. Convert pounds to kilograms')
     print('5. Convert inches to centimeters')
     while menuChoice < 1 or menuChoice > 5:
+        print('Number must be between 1 and 5')
         try:
             menuChoice = int(input('Enter your choice: '))
-        except ValueError:
-            print('Invalid choice. Please enter a number from 1 to 5')
+        except:
+            print('Invalid input. Please enter a number')
     return menuChoice
 #Function to get the miles input
 def milesInput():
