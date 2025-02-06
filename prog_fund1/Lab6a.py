@@ -1,5 +1,5 @@
 #Import conversion function
-import labconverter
+import labConverter6a
 #Define Main function, get input and check for validity with loops to confirm input is valid
 def main():
    bad_counter = 0
@@ -48,10 +48,13 @@ def main():
                         print('Too much shrinking, can no longer see')    
                     else:
 #Print the initial values given and call imported functions to convert and print the conversions along with bad puns
-                        print (f'William, {miles_converter} miles is {labconverter.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
-                        print (f'William, {fahren_converter} degrees fahrenheit is {labconverter.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
-                        print (f'William, {gallons_converter} gallons comes out to {labconverter.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
-                        print (f'William, {pounds_converter} pounds turns into {labconverter.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
-                        print (f'William, {inches_converter} inches is {labconverter.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
-
+                        print (f'William, {miles_converter} miles is {labconverter6a.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
+                        print (f'William, {fahren_converter} degrees fahrenheit is {labconverter6a.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
+                        print (f'William, {gallons_converter} gallons comes out to {labconverter6a.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
+                        print (f'William, {pounds_converter} pounds turns into {labconverter6a.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
+                        print (f'William, {inches_converter} inches is {labconverter6a.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
+def writeToText(writeValue):
+    writeTimes = 0
+    while writeTimes < 9:
+        
 main()

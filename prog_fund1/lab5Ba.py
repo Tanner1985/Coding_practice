@@ -1,5 +1,5 @@
 #Import conversion function
-import labconverter
+import labConverter
 #Define Main function, get input and check for validity with loops to confirm input is valid
 def main():
    bad_counter = 0
