@@ -1,10 +1,11 @@
 #Import conversion function
 import labConverter6a
-#Define Main function, get input and check for validity with loops to confirm input is valid
+#Define Main function and call menu to get what value is being converted
 def main():
     valueChoice = selectMenu()
     convertNum = 0
     badCounter = 0
+#If miles is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
     if(valueChoice == 1): 
         while convertNum < 10 and badCounter < 3:
             miles_converter = milesInput()             
@@ -19,6 +20,7 @@ def main():
             print('Ran backwards too many times')
         else:
             print('Conversions complete. They can be found in conversions.txt')
+#If fahrenheit is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
     elif(valueChoice == 2):
         while convertNum < 10 and badCounter < 3:
             fahren_converter = fahrenheitInput()               
@@ -34,6 +36,7 @@ def main():
         else:
             print('Conversions complete. They can be found in conversions.txt')  
     elif(valueChoice == 3):
+#If gallons is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
         while convertNum < 10 and badCounter < 3:
             gallons_converter = gallonsInput()               
             if(gallons_converter < 0):
@@ -47,6 +50,7 @@ def main():
             print('Program dehydrated from too many negatives')
         else:
             print('Conversions complete. They can be found in conversions.txt')
+#If pounds is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
     elif(valueChoice == 4):
         while convertNum < 10 and badCounter < 3:
             pounds_converter = poundsInput()               
@@ -61,6 +65,7 @@ def main():
             print('Too much antigravity, now on the moon')
         else:
             print('Conversions complete. They can be found in conversions.txt')
+#If inches is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
     elif(valueChoice == 5):
         while convertNum < 10 and badCounter < 3: 
             inches_converter = inchesInput()              
@@ -108,6 +113,7 @@ def milesInput():
         print('Invalid input. Please enter a number')
         miles_converter = milesInput()    
     return miles_converter
+#Function to get the fahrenheit input
 def fahrenheitInput():
     try:
         fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius '))
@@ -115,6 +121,7 @@ def fahrenheitInput():
         print('Invalid input. Please enter a number')
         fahren_converter = fahrenheitInput()
     return fahren_converter
+#Function to get the gallons input
 def gallonsInput():
     try:
         gallons_converter = float(input('William, please input the gallons you wish to convert to liters '))
@@ -122,6 +129,7 @@ def gallonsInput():
         print('Invalid input. Please enter a number')
         gallons_converter = gallonsInput()
     return gallons_converter
+#Function to get the pounds input
 def poundsInput():
     try:
         pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
@@ -129,6 +137,7 @@ def poundsInput():
         print('Invalid input. Please enter a number')
         pounds_converter = poundsInput()
     return pounds_converter
+#Function to get the inches input
 def inchesInput():   
     try:
         inches_converter = float(input('William, please input the inches you wish to convert to centimeters '))
