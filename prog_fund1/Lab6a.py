@@ -86,22 +86,19 @@ def writeToText(writeValue):
     myFile.close()
 #Function to print menu and ask for select choice, validates the input is a number between 1 and 5
 def selectMenu():
+    menuChoice = 0
     print('Please select an option from the menu below:')
     print('1. Convert miles to kilometers')
     print('2. Convert fahrenheit to celsius')
     print('3. Convert gallons to liters')
     print('4. Convert pounds to kilograms')
     print('5. Convert inches to centimeters')
-    try:
-        menuChoice = int(input('Enter your choice: '))
-    except ValueError:
-        print('Invalid choice. Please enter a number from 1 to 5')
-        menuChoice = selectMenu()
-    if(menuChoice < 1 or menuChoice > 5):
-        print('Invalid choice. Please enter a number from 1 to 5')
-        menuChoice = selectMenu()
-    else:
-        return menuChoice
+    while menuChoice < 1 or menuChoice > 5:
+        try:
+            menuChoice = int(input('Enter your choice: '))
+        except ValueError:
+            print('Invalid choice. Please enter a number from 1 to 5')
+    return menuChoice
 #Function to get the miles input
 def milesInput():
     try:
