@@ -48,10 +48,10 @@ def main():
                         print('Too much shrinking, can no longer see')    
                     else:
 #Print the initial values given and call imported functions to convert and print the conversions along with bad puns
-                        print (f'William, {miles_converter} miles is {labconverter.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
-                        print (f'William, {fahren_converter} degrees fahrenheit is {labconverter.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
-                        print (f'William, {gallons_converter} gallons comes out to {labconverter.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
-                        print (f'William, {pounds_converter} pounds turns into {labconverter.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
-                        print (f'William, {inches_converter} inches is {labconverter.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
+                        print (f'William, {miles_converter} miles is {labConverter.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
+                        print (f'William, {fahren_converter} degrees fahrenheit is {labConverter.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
+                        print (f'William, {gallons_converter} gallons comes out to {labConverter.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
+                        print (f'William, {pounds_converter} pounds turns into {labConverter.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
+                        print (f'William, {inches_converter} inches is {labConverter.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
 
 main()

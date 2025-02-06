@@ -2,59 +2,56 @@
 import labConverter6a
 #Define Main function, get input and check for validity with loops to confirm input is valid
 def main():
-   bad_counter = 0
-   miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
-   while(miles_converter < 0 and bad_counter < 2):
-        print('Negative number for miles detected. No running backwards please')
-        miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
-        bad_counter = bad_counter + 1
-   if (bad_counter == 2):
-        print('Ran backwards too many times')
-   else:
-        fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius '))
-        bad_counter = 0
-        while(fahren_converter > 1000 and bad_counter < 2):
-            print('To large a number for temperature conversion. No fires please')
-            fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius '))
-            bad_counter = bad_counter + 1 
-        if(bad_counter == 2):
-            print('Too many fires. You may be on the sun')
+    valueChoice = selectMenu()
+    convertNum = 0
+    badCounter = 0
+    if(valueChoice == 1):
+        miles_converter = milesInput() 
+        while convertNum < 10 and badCounter < 2:               
+            if(miles_converter < 0):
+                print('Negative number for miles detected. No running backwards please')
+                badCounter = badCounter + 1
+                miles_converter = milesInput()
+            else:
+                convertedValue = labConverter6a.milesToKm(miles_converter)
+                writeToText(f'William, {miles_converter:.2f} miles is {convertedValue:.2f} kilometers. Quite a long shot huh?') 
+                convertNum = convertNum + 1
+                miles_converter = milesInput()
+        if(badCounter == 2):        
+            print('Ran backwards too many times')
         else:
-            gallons_converter = float(input('William, please input the gallons you wish to convert to liters '))
-            bad_counter = 0
-            while(gallons_converter < 0 and bad_counter < 2):
-                print ('Negative number for gallons detected. Keep hydrated please')
-                gallons_converter = float(input('William, please input the gallons you wish to convert to liters '))
-                bad_counter = bad_counter + 1 
-            if(bad_counter == 2):
-                print('Program dehydrated from too many negatives')    
-            else: 
-                pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
-                bad_counter = 0
-                while(pounds_converter < 0 and bad_counter < 2):
-                    print ('Negative number for pounds detected. Please patient your antigravity technology')
-                    pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
-                    bad_counter = bad_counter + 1
-                if(bad_counter == 2):   
-                    print('Too much antigravity, now on the moon')    
-                else: 
-                    inches_converter = float(input('William, please input the inches you wish to convert to centimeters '))
-                    bad_counter = 0
-                    while(inches_converter < 0 and bad_counter < 2):
-                        print ('Negative number for inches detected. No playing with shrink-rays')
-                        inches_converter = float(input('William, please input the inches you wish to convert to centimeters '))
-                        bad_counter = bad_counter + 1
-                    if(bad_counter == 2):    
-                        print('Too much shrinking, can no longer see')    
-                    else:
-#Print the initial values given and call imported functions to convert and print the conversions along with bad puns
-                        print (f'William, {miles_converter} miles is {labconverter6a.milesToKm(miles_converter):.2f} kilometers. Quite a long shot huh?')
-                        print (f'William, {fahren_converter} degrees fahrenheit is {labconverter6a.FahToCel(fahren_converter):.2f} degrees celsius. That is so cool!')
-                        print (f'William, {gallons_converter} gallons comes out to {labconverter6a.GalToLit(gallons_converter):.2f} liters. Should I turn down the volume?')
-                        print (f'William, {pounds_converter} pounds turns into {labconverter6a.PoundsToKg(pounds_converter):.2f} kilograms. That was some heavy math!')
-                        print (f'William, {inches_converter} inches is {labconverter6a.InchesToCm(inches_converter):.2f} centimeters. I have no more puns, but that was fun!')
+            print('Conversions complete. They can be found in conversions.txt')      
+
+#Function to write the conversions to a text file
 def writeToText(writeValue):
-    writeTimes = 0
-    while writeTimes < 9:
+    myFile = open('conversions.txt', 'a')
+    myFile.write(writeValue + '\n')
+    myFile.close()
+#Function to print menu and ask for select choice, validates the input is a number between 1 and 5
+def selectMenu():
+    print('Please select an option from the menu below:')
+    print('1. Convert miles to kilometers')
+    print('2. Convert fahrenheit to celsius')
+    print('3. Convert gallons to liters')
+    print('4. Convert pounds to kilograms')
+    print('5. Convert inches to centimeters')
+    try:
+        menuChoice = int(input('Enter your choice: '))
+    except ValueError:
+        print('Invalid choice. Please enter a number from 1 to 5')
+        menuChoice = selectMenu()
+    if(menuChoice < 1 or menuChoice > 5):
+        print('Invalid choice. Please enter a number from 1 to 5')
+        menuChoice = selectMenu()
+    else:
+        return menuChoice
+#Function to get the miles input
+def milesInput():
+    try:
+        miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
+    except ValueError:
+        print('Invalid input. Please enter a number')
+        miles_converter = milesInput()    
+    return miles_converter
         
 main()
