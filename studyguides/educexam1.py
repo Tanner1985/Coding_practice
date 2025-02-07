@@ -18,10 +18,10 @@ def random_number():
     return random_number
 
 def questionList():
-    question_list = ['What are the four external factors in the model of strategic learning?', 'What are the three internal factors of strategic learning?', 'Give two examples of each internal factor of the stratigic learning model', 'List your top two intelligences from the multiple intelligence list', 'What are two study skills for each of your intelligences?', 'What does SMART mean when making goals?', 'What is the capital of Mexico?', 'What is the capital of Brazil?', 'What is the capital of Argentina?', 'What is the capital of Australia?']
+    question_list = ['What are the four external factors in the model of strategic learning?', 'What are the three internal factors of strategic learning?', 'Give two examples of each internal factor of the stratigic learning model', 'List your top two intelligences from the multiple intelligence list', 'What are two study skills for each of your intelligences?', 'What does SMART mean when making goals?', 'What are two differences between Highschool and College, and why', 'What are the 7 Keys to success?', 'What are the elements of metacognition?', 'What makes a value into a core value?']
     return question_list
 def answerList():
-    answer_list = ['Teachers Expectations, Current activity requirements, Social context and support, Available resources', 'Skill, Will, Self-Regulation', 'Examples can be found in Revised model PDF ', 'List found in Multiple Intelligence PDF', 'List found in Multiple Intelligence PDF.', 'Specific, Measurable, Attainable, Realistic, Timeable', 'Mexico City', 'Brasilia', 'Buenos Aires', 'Canberra']
+    answer_list = ['Teachers Expectations, Current activity requirements, Social context and support, Available resources', 'Skill, Will, Self-Regulation', 'Examples can be found in Revised model PDF ', 'List found in Multiple Intelligence PDF', 'List found in Multiple Intelligence PDF.', 'Specific, Measurable, Attainable, Realistic, Timeable', 'Academics, Grading, Learning Stategies, Support, Stress, Responsibility', 'Show up, Preparation, Time Management, Effort, Motivation, Get help when needed, Learn from Everything', 'Self Awareness, Task Awareness, Strategy Awareness, Strategy Selection, Goal Setting Skills, Self-monitoring skills', 'Chosen Freely, Prized and Affirmed publically, Modeled']
     return answer_list
 
 main()
