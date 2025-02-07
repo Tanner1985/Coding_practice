@@ -1,5 +1,5 @@
 #Import conversion function
-import labConverter6a
+import labConverter
 #Define Main function and call menu to get what value is being converted
 def main():
     valueChoice = selectMenu()
@@ -13,7 +13,7 @@ def main():
                 print('Negative number for miles detected. No running backwards please')
                 badCounter = badCounter + 1
             else:
-                convertedValue = labConverter6a.milesToKm(miles_converter)
+                convertedValue = labConverter.milesToKm(miles_converter)
                 writeToText(f'William, {miles_converter:.2f} miles is {convertedValue:.2f} kilometers. Quite a long shot huh?') 
                 convertNum = convertNum + 1
         if(badCounter == 3):        
@@ -28,7 +28,7 @@ def main():
                 print('To large a number for temperature conversion. No fires please')
                 badCounter = badCounter + 1
             else:
-                convertedValue = labConverter6a.FahToCel(fahren_converter)
+                convertedValue = labConverter.FahToCel(fahren_converter)
                 writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool?') 
                 convertNum = convertNum + 1
         if(badCounter == 3):        
@@ -43,7 +43,7 @@ def main():
                 print('Negative number for gallons detected. Keep hydrated please')
                 badCounter = badCounter + 1
             else:
-                convertedValue = labConverter6a.GalToLit(gallons_converter)
+                convertedValue = labConverter.GalToLit(gallons_converter)
                 writeToText(f'William, {gallons_converter:.2f} gallons comes out to {convertedValue:.2f} liters. Should I turn down the volume?') 
                 convertNum = convertNum + 1
         if(badCounter == 3):        
@@ -58,7 +58,7 @@ def main():
                 print('Negative number for pounds detected. Please patient your antigravity technology')
                 badCounter = badCounter + 1
             else:
-                convertedValue = labConverter6a.PoundsToKg(pounds_converter)
+                convertedValue = labConverter.PoundsToKg(pounds_converter)
                 writeToText(f'William, {pounds_converter:.2f} pounds turns into {convertedValue:.2f} kilograms. That was some heavy math!') 
                 convertNum = convertNum + 1
         if(badCounter == 3):        
@@ -73,7 +73,7 @@ def main():
                 print('Negative number for inches detected. No playing with shrink-rays')
                 badCounter = badCounter + 1
             else:
-                convertedValue = labConverter6a.InchesToCm(inches_converter)
+                convertedValue = labConverter.InchesToCm(inches_converter)
                 writeToText(f'William, {inches_converter:.2f} inches is {convertedValue:.2f} centimeters. I have no more puns, but that was fun!') 
                 convertNum = convertNum + 1
         if(badCounter == 3):        
