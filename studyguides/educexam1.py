@@ -14,14 +14,14 @@ def main():
 
 def random_number():
     import random
-    random_number = random.randint(0,9)
+    random_number = random.randint(0,14)
     return random_number
 
 def questionList():
-    question_list = ['What are the four external factors in the model of strategic learning?', 'What are the three internal factors of strategic learning?', 'Give two examples of each internal factor of the stratigic learning model', 'List your top two intelligences from the multiple intelligence list', 'What are two study skills for each of your intelligences?', 'What does SMART mean when making goals?', 'What are two differences between Highschool and College, and why', 'What are the 7 Keys to success?', 'What are the elements of metacognition?', 'What makes a value into a core value?']
+    question_list = ['What are the four external factors in the model of strategic learning?', 'What are the three internal factors of strategic learning?', 'Give two examples of each internal factor of the stratigic learning model', 'List your top two intelligences from the multiple intelligence list', 'What are two study skills for each of your intelligences?', 'What does SMART mean when making goals?', 'What are two differences between Highschool and College, and why', 'What are the 7 Keys to success?', 'What are the elements of metacognition?', 'What makes a value into a core value?', 'What Quadrent of the important/urgent model should you focus on?', 'Give two examples of why quadrent 2 should be  focus', 'What are 3 benifits of procrastination?', 'What are three costs of procrastination?', 'What are three ways to avoid the costs of procrastination?']
     return question_list
 def answerList():
-    answer_list = ['Teachers Expectations, Current activity requirements, Social context and support, Available resources', 'Skill, Will, Self-Regulation', 'Examples can be found in Revised model PDF ', 'List found in Multiple Intelligence PDF', 'List found in Multiple Intelligence PDF.', 'Specific, Measurable, Attainable, Realistic, Timeable', 'Academics, Grading, Learning Stategies, Support, Stress, Responsibility', 'Show up, Preparation, Time Management, Effort, Motivation, Get help when needed, Learn from Everything', 'Self Awareness, Task Awareness, Strategy Awareness, Strategy Selection, Goal Setting Skills, Self-monitoring skills', 'Chosen Freely, Prized and Affirmed publically, Modeled']
+    answer_list = ['Teachers Expectations, Current activity requirements, Social context and support, Available resources', 'Skill, Will, Self-Regulation', 'Examples can be found in Revised model PDF ', 'List found in Multiple Intelligence PDF', 'List found in Multiple Intelligence PDF.', 'Specific, Measurable, Attainable, Realistic, Timeable', 'Academics, Grading, Learning Stategies, Support, Stress, Responsibility', 'Show up, Preparation, Time Management, Effort, Motivation, Get help when needed, Learn from Everything', 'Self Awareness, Task Awareness, Strategy Awareness, Strategy Selection, Goal Setting Skills, Self-monitoring skills', 'Chosen Freely, Prized and Affirmed publically, Modeled', 'Quadrent 2','Ex: Prevent quadrent 1 things, better health, self improvement', 'Relief, the rush, freedom', 'Stress, Grades, Quality, Self Esteem/Health suffers', 'Seek help, Set Reasonable Goals, Dont expect perfection' ]
     return answer_list
 
 main()
