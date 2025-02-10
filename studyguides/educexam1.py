@@ -7,7 +7,7 @@ def main():
     print(f'You answered: {answer}')
     print(f'The correct answer is: {answer_list[questionNum]}')
     play_again = input('Would you like to play again? (yes or no): ')
-    if(play_again == 'yes'):
+    if(play_again == 'yes'or 'Yes' or 'YES'):
         main()
     else:
         print('Thank you for playing!')
