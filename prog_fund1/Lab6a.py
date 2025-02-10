@@ -80,6 +80,7 @@ def main():
             print('Too much shrinking, can no longer see')
         else:
             print('Conversions complete. They can be found in conversions.txt')  
+    #Error catch if logic fails to catch previous bad selection - should never be seen if all else works
     else:
         print('Unsure how you got here. Starting over')
         main()  
