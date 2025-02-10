@@ -2,7 +2,7 @@
 salesPerson= input('Please enter the salespersons name: ')
 salesAmount = float(input('Please input the salespersons total sales for the month: '))
 vacationDays = float(input('Please input the number of vacation days the salesperson took in the month: '))
-monthsAtcompany = float(input('Please input the number of months this salesperson has been with SoftwarePirates: '))
+monthsAtcompany = int(input('Please input the number of months this salesperson has been with SoftwarePirates: '))
 base_pay = 2000
 #Check if salesperson needs a vacation deduction
 if(vacationDays > 3):
