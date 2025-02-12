@@ -1,44 +1,44 @@
 # Get each value for conversion and make sure they are valid using a loop to allow for up to 3 attempts at the input
 miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
 bad_counter = 0
-while(miles_converter < 0 and bad_counter < 2):
+while miles_converter < 0 and bad_counter < 2:
     print('Negative number for miles detected. No running backwards please')
     miles_converter = float(input('William, please input the miles you wish to convert to kilometers '))
     bad_counter = bad_counter + 1
-if(bad_counter == 2):
+if bad_counter == 2:
     print('Ran backwards too many times')
 else:
     fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius '))
     bad_counter = 0
-    while(fahren_converter > 1000 and bad_counter < 2):
+    while fahren_converter > 1000 and bad_counter < 2:
         print('To large a number for temperature conversion. No fires please')
         fahren_converter = float(input('William, please input the degrees in fahrenheit you wish to convert to Celsius '))
         bad_counter = bad_counter + 1 
-    if(bad_counter == 2):
+    if bad_counter == 2:
         print('Too many fires. You may be on the sun')
     else: 
         gallons_converter = float(input('William, please input the gallons you wish to convert to liters '))
-        while(gallons_converter < 0 and bad_counter < 2):
+        while gallons_converter < 0 and bad_counter < 2:
             print ('Negative number for gallons detected. Keep hydrated please')
             gallons_converter = float(input('William, please input the gallons you wish to convert to liters '))
             bad_counter = bad_counter + 1 
-        if(bad_counter == 2):
+        if bad_counter == 2:
             print('Program dehydrated from too many negatives')    
         else:
             pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
-            while(pounds_converter < 0 and bad_counter < 2):
+            while pounds_converter < 0 and bad_counter < 2:
                 print ('Negative number for pounds detected. Please patent your antigravity technology')
                 pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
                 bad_counter = bad_counter + 1
-            if(bad_counter == 2):   
+            if bad_counter == 2:   
                 print('Too much antigravity, now on the moon')    
             else:    
                 inches_converter = float(input('William, please input the inches you wish to convert to centimeters '))
-                while(inches_converter < 0 and bad_counter < 2):
+                while inches_converter < 0 and bad_counter < 2:
                     print ('Negative number for inches detected. No playing with shrink-rays')
                     inches_converter = float(input('William, please input the inches you wish to convert to centimeters '))
                     bad_counter = bad_counter + 1
-                if(bad_counter == 2):    
+                if bad_counter == 2:    
                     print('Too much shrinking, can no longer see')    
                 else:    
 #Do math on each value to convert to metric

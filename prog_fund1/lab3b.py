@@ -5,36 +5,36 @@ vacationDays = int(input('Please input the number of vacation days the salespers
 monthsAtcompany = int(input('Please input the number of months this salesperson has been with SoftwarePirates: '))
 base_pay = 2000
 #Check if salesperson needs a vacation deduction
-if(vacationDays > 3):
+if vacationDays > 3:
     vacationLoss = 200
 else:
     vacationLoss = 0
 #Check if salesperson is eligible for a bonus    
-if(monthsAtcompany > 3):
+if monthsAtcompany > 3:
     bonusAval = True
 else:
     bonusAval = False
 #Calculate the commission
-if(salesAmount > 10000 and salesAmount <= 100000):
+if salesAmount > 10000 and salesAmount <= 100000:
     commission = salesAmount * 0.02
-elif(salesAmount > 100000 and salesAmount <= 500000):
+elif salesAmount > 100000 and salesAmount <= 500000:
     commission = salesAmount * 0.15
-elif(salesAmount > 500000 and salesAmount <= 1000000):
+elif salesAmount > 500000 and salesAmount <= 1000000:
     commission = salesAmount * 0.28
-elif(salesAmount > 1000000):
+elif salesAmount > 1000000:
     commission = salesAmount * 0.35
 else:
     commission = 0
 #Calculate bonuses
-if(monthsAtcompany > 59 and salesAmount > 1000000):
+if monthsAtcompany > 59 and salesAmount > 1000000:
     extraBonus = 1000
 else:
     extraBonus = 0  
-if(salesAmount > 100000 and salesAmount <= 500000 and bonusAval):
+if salesAmount > 100000 and salesAmount <= 500000 and bonusAval:
     bonus = 1000
-elif(salesAmount > 500000 and salesAmount <= 1000000 and bonusAval):
+elif salesAmount > 500000 and salesAmount <= 1000000 and bonusAval:
     bonus = 5000
-elif(salesAmount > 1000000 and bonusAval == True):
+elif salesAmount > 1000000 and bonusAval:
     bonus = 100000
 else:
     bonus = 0
