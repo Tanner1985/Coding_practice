@@ -15,11 +15,11 @@ if(monthsAtcompany > 3):
 else:
     bonusAval = False
 #Calculate the commission
-if(salesAmount > 10000 and salesAmount < 100001):
+if(salesAmount > 10000 and salesAmount <= 100000):
     commission = salesAmount * .02
-elif(salesAmount > 100000 and salesAmount < 500001):
+elif(salesAmount > 100000 and salesAmount <= 500000):
     commission = salesAmount * .15
-elif(salesAmount > 500000 and salesAmount < 1000001):
+elif(salesAmount > 500000 and salesAmount <= 1000000):
     commission = salesAmount * .28
 elif(salesAmount > 1000000):
     commission = salesAmount * .35
