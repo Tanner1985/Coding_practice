@@ -30,9 +30,9 @@ if(monthsAtcompany > 59 and salesAmount > 1000000):
     extraBonus = 1000
 else:
     extraBonus = 0  
-if(salesAmount > 100000 and salesAmount < 500001 and bonusAval == True):
+if(salesAmount > 100000 and salesAmount <= 500000 and bonusAval == True):
     bonus = 1000
-elif(salesAmount > 500000 and salesAmount < 1000001 and bonusAval == True):
+elif(salesAmount > 500000 and salesAmount <= 1000000 and bonusAval == True):
     bonus = 5000
 elif(salesAmount > 1000000 and bonusAval == True):
     bonus = 100000

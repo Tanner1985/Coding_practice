@@ -22,10 +22,10 @@ def getStudentGrade():
     except ValueError:
         print('Invalid input. Please enter a number')
         studentGrade = getStudentGrade()
-    while studentGrade < 0 or studentGrade > 100:
+    if studentGrade < 0 or studentGrade > 100:
         print('Grade must be between 0 and 100')
         studentGrade = getStudentGrade()
-    if studentGrade >= 0 or studentGrade <= 100:
+    else:
         return studentGrade       
 #Function to write to file
 def writeToFile(writeValue, fileName): 
