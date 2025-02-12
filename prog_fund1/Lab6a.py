@@ -55,7 +55,7 @@ def main():
         while convertNum < 10 and badCounter < 3:
             pounds_converter = poundsInput()               
             if(pounds_converter < 0):
-                print('Negative number for pounds detected. Please patient your antigravity technology')
+                print('Negative number for pounds detected. Please patent your antigravity technology')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.PoundsToKg(pounds_converter)

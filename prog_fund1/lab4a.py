@@ -27,7 +27,7 @@ else:
         else:
             pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
             while(pounds_converter < 0 and bad_counter < 2):
-                print ('Negative number for pounds detected. Please patient your antigravity technology')
+                print ('Negative number for pounds detected. Please patent your antigravity technology')
                 pounds_converter = float(input('William, please input the pounds you wish to convert to kilograms '))
                 bad_counter = bad_counter + 1
             if(bad_counter == 2):   
