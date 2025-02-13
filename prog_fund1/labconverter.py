@@ -2,7 +2,7 @@
 def InchesToCm(inches_converter):
         return inches_converter * 2.54
 def PoundsToKg(pounds_converter):
-        return pounds_converter * .45
+        return pounds_converter * 0.45
 def GalToLit(gallons_converter):
         return gallons_converter * 3.9
 def FahToCel(fahren_converter):
