@@ -6,32 +6,32 @@ def main():
     convertNum = 0
     badCounter = 0
 #If miles is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
-    if(valueChoice == 1): 
+    if valueChoice == 1: 
         while convertNum < 10 and badCounter < 3:
             miles_converter = milesInput()             
-            if(miles_converter < 0):
+            if miles_converter < 0:
                 print('Negative number for miles detected. No running backwards please')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.milesToKm(miles_converter)
                 writeToText(f'William, {miles_converter:.2f} miles is {convertedValue:.2f} kilometers. Quite a long shot huh?') 
                 convertNum = convertNum + 1
-        if(badCounter == 3):        
+        if badCounter == 3:        
             print('Ran backwards too many times')
         else:
             print('Conversions complete. They can be found in conversions.txt')
 #If fahrenheit is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
-    elif(valueChoice == 2):
+    elif valueChoice == 2:
         while convertNum < 10 and badCounter < 3:
             fahren_converter = fahrenheitInput()               
-            if(fahren_converter > 1000):
+            if fahren_converter > 1000:
                 print('To large a number for temperature conversion. No fires please')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.FahToCel(fahren_converter)
                 writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool?') 
                 convertNum = convertNum + 1
-        if(badCounter == 3):        
+        if badCounter == 3:        
             print('Too many fires. You may be on the sun')
         else:
             print('Conversions complete. They can be found in conversions.txt')  
@@ -39,44 +39,44 @@ def main():
 #If gallons is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
         while convertNum < 10 and badCounter < 3:
             gallons_converter = gallonsInput()               
-            if(gallons_converter < 0):
+            if gallons_converter < 0:
                 print('Negative number for gallons detected. Keep hydrated please')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.GalToLit(gallons_converter)
                 writeToText(f'William, {gallons_converter:.2f} gallons comes out to {convertedValue:.2f} liters. Should I turn down the volume?') 
                 convertNum = convertNum + 1
-        if(badCounter == 3):        
+        if badCounter == 3:        
             print('Program dehydrated from too many negatives')
         else:
             print('Conversions complete. They can be found in conversions.txt')
 #If pounds is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
-    elif(valueChoice == 4):
+    elif valueChoice == 4:
         while convertNum < 10 and badCounter < 3:
             pounds_converter = poundsInput()               
-            if(pounds_converter < 0):
+            if pounds_converter < 0:
                 print('Negative number for pounds detected. Please patent your antigravity technology')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.PoundsToKg(pounds_converter)
                 writeToText(f'William, {pounds_converter:.2f} pounds turns into {convertedValue:.2f} kilograms. That was some heavy math!') 
                 convertNum = convertNum + 1
-        if(badCounter == 3):        
+        if badCounter == 3:        
             print('Too much antigravity, now on the moon')
         else:
             print('Conversions complete. They can be found in conversions.txt')
 #If inches is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
-    elif(valueChoice == 5):
+    elif valueChoice == 5:
         while convertNum < 10 and badCounter < 3: 
             inches_converter = inchesInput()              
-            if(inches_converter < 0):
+            if inches_converter < 0:
                 print('Negative number for inches detected. No playing with shrink-rays')
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.InchesToCm(inches_converter)
                 writeToText(f'William, {inches_converter:.2f} inches is {convertedValue:.2f} centimeters. I have no more puns, but that was fun!') 
                 convertNum = convertNum + 1
-        if(badCounter == 3):        
+        if badCounter == 3:        
             print('Too much shrinking, can no longer see')
         else:
             print('Conversions complete. They can be found in conversions.txt')  
