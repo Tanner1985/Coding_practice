@@ -20,6 +20,9 @@ def main():
     appendData = 'Guatemala Antigua\n22\nHouse Blend\n25\nDecaf House Blend\n16'
     writeToFile(appendData, fileName)
     #Ask owner for description to remove
+    removeData(fileName)
+    #Ask owner for description to delete
+    readFile(fileName)
 
 
 
@@ -46,21 +49,29 @@ def totalPounds(fileName):
     totalPounds = 0
     for line in myFile:
         try:
-            totalPounds += int(line)
+            totalPounds = totalPounds + int(line)
         except ValueError:
-            totalPounds += 0        
+            totalPounds = totalPounds + 0        
     myFile.close()
     return totalPounds
 #Function to remove data from file
 def removeData(fileName):
-    myFile = open(fileName, 'a')
+    myFile = open(fileName, 'r')
+    found = False
     removeDesc = input('Enter the description to remove: ')
-    for line in myFile:
-        if removeDesc in line:
-            myFile.remove(line)
+    currentLine = myFile.readline()
+    while currentLine != '':
+        if removeDesc == currentLine:
+            found = True
+            myFile.write('')
+            myFile.write('')
+            currentLine = myFile.readline()
         else:
-            print('That item was not found in the file')
-
-
+            currentLine = myFile.readline()
+    if found == True:
+        print('Item removed')
+    else:
+        print('Item not found')
+    myFile.close()
 
 main()
