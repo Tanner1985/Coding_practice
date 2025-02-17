@@ -9,10 +9,16 @@ for r in range(rows):
 for r in range (rows):
     print('*' * (rows-r))
 
-#Tried with a while loop, works. 
+#Tried with a for and while loop, works. 
 for r in range (rows):
     s=0
     while s < (rows - r):
         print('*', end = '')
         s = s + 1
     print()
+
+#No for loop at all. Still works
+r = 0
+while r < (rows):
+    print('*' * rows)
+    rows = rows -1
