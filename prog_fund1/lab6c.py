@@ -20,15 +20,15 @@ def main():
     appendData = 'Guatemala Antigua\n22\nHouse Blend\n25\nDecaf House Blend\n16'
     writeToFile(appendData, fileName)
     #Ask owner for description to remove
-    removeData(fileName)
+    dataRemove = input('Would you like to remove data from the file? (yes or no): ')
+    if dataRemove == 'yes':
+        removeData(fileName)
     readFile(fileName)
     #Ask owner for description to delete and replace
-    modifyData(fileName)
+    dataModify = input('Would you like to delete and replace data from the file? (yes or no): ')
+    if dataModify == 'yes':
+        modifyData(fileName)
     readFile(fileName)
-
-
-
-
 
 #Function to write to file
 def writeToFile(writeValue, fileName): 
