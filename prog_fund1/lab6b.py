@@ -2,14 +2,15 @@
 def main():
     #Define file name and number of students
     fileName = 'grades.txt'
-    numberOfStudents = 12
+    numberOfStudents = 1
     #Loop to get student name and grade, writing to file after each set of input
     for i in range(numberOfStudents):
         studentName = getStudentName()
         studentGrade = getStudentGrade()
         writeValue = studentName + ' ' + str(studentGrade)
         writeToFile(writeValue, fileName)
-    #Read the file and print the contents            
+    #Read the file and print the contents 
+    fileName = input('Please Enter the Filename you would like to check: ')           
     readFile(fileName)
 #Function to get and return student name
 def getStudentName():
