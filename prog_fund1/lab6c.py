@@ -21,7 +21,9 @@ def main():
     writeToFile(appendData, fileName)
     #Ask owner for description to remove
     removeData(fileName)
-    #Ask owner for description to delete
+    readFile(fileName)
+    #Ask owner for description to delete and replace
+    modifyData(fileName)
     readFile(fileName)
 
 
@@ -61,17 +63,40 @@ def removeData(fileName):
         removeDesc = input('Enter the description to remove: ')
         currentLine = myFile.readline()
         while currentLine != '':
-            if removeDesc != currentLine:
-                tempFil.write(currentLine)
-                currentLine = myFile.readline()
-            else:
+            if removeDesc == currentLine:
                 found = True
                 currentLine = myFile.readline()
+                currentLine = myFile.readline()
+            else:
+                tempFil.write(currentLine)
                 currentLine = myFile.readline()
         if found == True:
             print('Item removed')
         else:
-            print('Item not found')
+            print('That item was not found in the file')
+    os.remove(fileName)
+    os.rename('temp.txt', fileName)
+#Function to delete and replace data from file
+def modifyData(fileName):
+    with open (fileName, 'r') as myFile, open ('temp.txt', 'w') as tempFil:
+        found = False
+        deleteDesc = input('Enter the description to delete: ')
+        currentLine = myFile.readline()
+        while currentLine != '':
+            if deleteDesc == currentLine:
+                found = True
+                currentLine = myFile.readline()
+                currentLine = myFile.readline()
+            else:
+                tempFil.write(currentLine)
+                currentLine = myFile.readline()
+        if found == True:
+            print('Item deleted')
+            newName = input('Enter the new name: ')
+            newQuantity = input('Enter the new quantity: ')
+            tempFil.write(newName + '\n' + newQuantity + '\n')
+        else:
+            print('That item was not found in the file')
     os.remove(fileName)
     os.rename('temp.txt', fileName)
 
