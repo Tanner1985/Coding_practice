@@ -4,7 +4,7 @@
 #Append the following data to the file: Guatemala Antigua, 22 ; House Blend, 25 ; Decaf House Blend, 16
 #Ask if owner wants to modify the file by removing data, if yes, ask for a description to remove and remove it and it's pounds if it exists, otherwise display "That item was not found in the file"
 #Ask if the owner wants to delete data from the file, if yes ask for a description to delete, if it exists delete the name and quantity and replace it by asking for a new name and quantiity. If it does not exist, display "That item was not found in the file"
-
+import os
 def main():
     #Define file name
     fileName = 'coffeeInventory.txt'
@@ -56,22 +56,23 @@ def totalPounds(fileName):
     return totalPounds
 #Function to remove data from file
 def removeData(fileName):
-    myFile = open(fileName, 'r')
-    found = False
-    removeDesc = input('Enter the description to remove: ')
-    currentLine = myFile.readline()
-    while currentLine != '':
-        if removeDesc == currentLine:
-            found = True
-            myFile.write('')
-            myFile.write('')
-            currentLine = myFile.readline()
+    with open (fileName, 'r') as myFile, open ('temp.txt', 'w') as tempFil:
+        found = False
+        removeDesc = input('Enter the description to remove: ')
+        currentLine = myFile.readline()
+        while currentLine != '':
+            if removeDesc != currentLine:
+                tempFil.write(currentLine)
+                currentLine = myFile.readline()
+            else:
+                found = True
+                currentLine = myFile.readline()
+                currentLine = myFile.readline()
+        if found == True:
+            print('Item removed')
         else:
-            currentLine = myFile.readline()
-    if found == True:
-        print('Item removed')
-    else:
-        print('Item not found')
-    myFile.close()
+            print('Item not found')
+    os.remove(fileName)
+    os.rename('temp.txt', fileName)
 
 main()
