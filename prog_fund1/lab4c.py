@@ -1,9 +1,9 @@
 #Set up initial variables
-moreGrades = 'yes'
+grade = 0
 numberGrades = 0
 totalGrade = 0
-#Use a while loop to continue taking input until told to stop
-while moreGrades != 'no':
+#Use a while loop to continue taking input until told getting a -1 as a grade
+while grade != -1:
     grade = float(input('Please enter the current students grade: '))
     numberGrades = numberGrades + 1
     totalGrade = totalGrade + grade
@@ -18,8 +18,6 @@ while moreGrades != 'no':
         print('You got a D. You can do better, study a bit more')
     else:
         print('You got an F! Did you study at all?')
-    #Ask if they want to break the input loop
-    moreGrades = input('Would you like to enter another grade? yes or no : ')
 #print the final number of grades and the adverage 
 print(f'The total number of grades was {numberGrades} and the class adverage was {int(totalGrade/numberGrades)}')
     
