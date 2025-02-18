@@ -1,24 +1,25 @@
 #Set rows and loop, printing a * for the row number minus the outer loops current iteration
-rows = 7
+rows = 10
 for r in range(rows):
     for s in range(rows - r):
         print('*', end='')
     print('')
 
-#Another way using multiplication, simpler
+#Tried with a controled inner while loop 
 for r in range (rows):
-    print('*' * (rows-r))
-
-#Tried with a for and while loop, works. 
-for r in range (rows):
-    s=0
-    while s < (rows - r):
+    stars = 0
+    while stars < (rows - r):
         print('*', end = '')
-        s = s + 1
-    print()
+        stars = stars + 1
+    print('')
 
-#No for loop at all. Still works
-r = 0
-while r < (rows):
-    print('*' * rows)
-    rows = rows -1
+#Double while loop version
+lines = 0
+stars2 = 0
+while lines < rows:
+    while stars2 < (rows - lines):
+        print('*', end = '')
+        stars2 = stars2 + 1
+    print('')
+    lines = lines + 1
+    stars2 = 0
