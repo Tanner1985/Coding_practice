@@ -14,7 +14,8 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.milesToKm(miles_converter)
-                writeToText(f'William, {miles_converter:.2f} miles is {convertedValue:.2f} kilometers. Quite a long shot huh?') 
+                writeToText(f'William, {miles_converter:.2f} miles is {convertedValue:.2f} kilometers. Quite a long shot huh?')
+                badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
             print('Ran backwards too many times')
@@ -29,7 +30,8 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.FahToCel(fahren_converter)
-                writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool?') 
+                writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool?')
+                badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
             print('Too many fires. You may be on the sun')
@@ -44,7 +46,8 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.GalToLit(gallons_converter)
-                writeToText(f'William, {gallons_converter:.2f} gallons comes out to {convertedValue:.2f} liters. Should I turn down the volume?') 
+                writeToText(f'William, {gallons_converter:.2f} gallons comes out to {convertedValue:.2f} liters. Should I turn down the volume?')
+                badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
             print('Program dehydrated from too many negatives')
@@ -59,7 +62,8 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.PoundsToKg(pounds_converter)
-                writeToText(f'William, {pounds_converter:.2f} pounds turns into {convertedValue:.2f} kilograms. That was some heavy math!') 
+                writeToText(f'William, {pounds_converter:.2f} pounds turns into {convertedValue:.2f} kilograms. That was some heavy math!')
+                badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
             print('Too much antigravity, now on the moon')
@@ -74,7 +78,8 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.InchesToCm(inches_converter)
-                writeToText(f'William, {inches_converter:.2f} inches is {convertedValue:.2f} centimeters. I have no more puns, but that was fun!') 
+                writeToText(f'William, {inches_converter:.2f} inches is {convertedValue:.2f} centimeters. I have no more puns, but that was fun!')
+                badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
             print('Too much shrinking, can no longer see')
