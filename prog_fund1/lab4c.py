@@ -8,7 +8,9 @@ while grade != -1:
     numberGrades = numberGrades + 1
     totalGrade = totalGrade + grade
     #Check grade and give feedback on their letter value
-    if grade >= 90:
+    if grade == -1:
+        print('Escape value entered')
+    elif grade >= 90:
         print('You got an A! Great job')
     elif grade >= 80:
         print('You got a B. Not bad at all!')
@@ -18,6 +20,9 @@ while grade != -1:
         print('You got a D. You can do better, study a bit more')
     else:
         print('You got an F! Did you study at all?')
-#print the final number of grades and the adverage 
-print(f'The total number of grades was {numberGrades} and the class adverage was {int(totalGrade/numberGrades)}')
+#Check if only 1 loop happened to very a valid grade was entered, then respond accordingly with adverage if real grades were entered
+if(numberGrades - 1) == 0:
+    print ('No Grades entered')
+else:
+    print(f'The total number of grades was {numberGrades - 1} and the class adverage was {int((totalGrade + 1)/(numberGrades - 1))}')
     
