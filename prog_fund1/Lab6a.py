@@ -5,7 +5,7 @@ def main():
     valueChoice = selectMenu()
     convertNum = 0
     badCounter = 0
-#If miles is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
+#If miles is selected, get the input and check for validity, loop 10 times or until 3 bad inputs in a row and write to text file
     if valueChoice == 1: 
         while convertNum < 10 and badCounter < 3:
             miles_converter = milesInput()             
@@ -21,7 +21,7 @@ def main():
             print('Ran backwards too many times')
         else:
             print('Conversions complete. They can be found in conversions.txt')
-#If fahrenheit is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
+#If fahrenheit is selected, get the input and check for validity, loop 10 times or until 3 bad inputs in a row and write to text file
     elif valueChoice == 2:
         while convertNum < 10 and badCounter < 3:
             fahren_converter = fahrenheitInput()               
@@ -30,7 +30,7 @@ def main():
                 badCounter = badCounter + 1
             else:
                 convertedValue = labConverter.FahToCel(fahren_converter)
-                writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool?')
+                writeToText(f'William, {fahren_converter:.2f} degrees fahrenheit is {convertedValue:.2f} degrees celsius. That is so cool!')
                 badCounter = 0 
                 convertNum = convertNum + 1
         if badCounter == 3:        
@@ -38,7 +38,7 @@ def main():
         else:
             print('Conversions complete. They can be found in conversions.txt')  
     elif(valueChoice == 3):
-#If gallons is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
+#If gallons is selected, get the input and check for validity, loop 10 times or until 3 bad inputs in a row and write to text file
         while convertNum < 10 and badCounter < 3:
             gallons_converter = gallonsInput()               
             if gallons_converter < 0:
@@ -53,7 +53,7 @@ def main():
             print('Program dehydrated from too many negatives')
         else:
             print('Conversions complete. They can be found in conversions.txt')
-#If pounds is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
+#If pounds is selected, get the input and check for validity, loop 10 times or until 3 bad inputs in a row and write to text file
     elif valueChoice == 4:
         while convertNum < 10 and badCounter < 3:
             pounds_converter = poundsInput()               
@@ -69,7 +69,7 @@ def main():
             print('Too much antigravity, now on the moon')
         else:
             print('Conversions complete. They can be found in conversions.txt')
-#If inches is selected, get the input and check for validity, loop 10 times or until 3 bad inputs and write to text file
+#If inches is selected, get the input and check for validity, loop 10 times or until 3 bad inputs in a row and write to text file
     elif valueChoice == 5:
         while convertNum < 10 and badCounter < 3: 
             inches_converter = inchesInput()              
