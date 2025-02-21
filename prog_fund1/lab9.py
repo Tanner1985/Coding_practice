@@ -17,3 +17,36 @@
 # 5. Print the data of all the students in a tabular format
 # 6. Quit the program Save all the files that you create in this program with appropriate
 # file names. 
+#import and constants
+import student
+NUMBEROFSTUDENTS = 1
+
+
+def main():
+    #create the students we will be using
+    students = []
+    for i in range (NUMBEROFSTUDENTS):
+        students.append(createNewStudent())
+    print(students)
+    
+
+
+
+
+
+
+
+
+
+def createNewStudent():
+    name = input('Please enter the students name: ')
+    id = input('Please enter the students ID: ')
+    gpa = input('Please enter the students GPA: ')
+    expectGrade = input('Please enter the students expected grade: ')
+    fullOrPart = input('Please enter if the student is full or part time: ')
+    return student.Student(name, id, gpa, expectGrade, fullOrPart)
+
+main()
+
+
+
