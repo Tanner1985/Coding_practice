@@ -9,3 +9,37 @@
 # 8. Write the list to a file. (LO 2)
 # 9. Display the contents of the file named names.txt.
 # 10.Convert the list to a Tuple. (LO 2, 5)
+#Define Constants
+STUDENTS = 3
+FILENAME = 'names.txt'
+#define main
+def main():
+    studentList = []
+    while STUDENTS > len(studentList):
+        name = input('Please enter a students name: ')
+        studentList.append(name)
+    studentList.sort()
+    studentList.reverse()
+    studentList.append('Polanco')
+    studentList.insert(0, 'Tanner')
+    writeToFile(FILENAME, studentList)
+    readFile(FILENAME)
+    studentTuple = tuple(studentList)
+    print(studentTuple)
+
+
+def writeToFile(filename, input):
+    with open(filename, 'a') as file:
+        for item in input:
+            file.write(item + '\n')
+
+def readFile(filename):
+    with open(filename, 'r') as file:
+        currentLine = file.readline()
+        while currentLine != '':
+            print(currentLine, end = '')
+            currentLine = file.readline()
+
+
+#call main
+main()
