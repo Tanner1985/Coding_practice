@@ -2,7 +2,7 @@
 def main():
     #Define file name and number of students
     fileName = 'grades.txt'
-    numberOfStudents = 1
+    numberOfStudents = 12
     #Loop to get student name and grade, writing to file after each set of input
     for i in range(numberOfStudents):
         studentName = getStudentName()

@@ -11,6 +11,7 @@ def main():
     #Convert the table to Celsius
     convTable = tableConvert('fahtocel', table)
     #print the table
+    print('---------------------------------------------------------')
     print('These are the converted values of Fahrenheit to Celsius')
     print('---------------------------------------------------------')
     printTable(table, convTable)
