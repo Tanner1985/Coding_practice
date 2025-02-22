@@ -38,8 +38,10 @@ def main():
             changeGPA(students)
         elif choice == 4:
             changeExpect(students)
-        else:
+        elif choice == 5:
             displayData(students)
+        else:
+            print('Exiting the program')
 
 #Function to create a new student using the Student Class
 def createNewStudent():
@@ -77,7 +79,9 @@ def lookUpGPA(list):
             name = student.getName()
             found = True
     if found:
+        print('-----------------------------------------')
         print(f'The GPA for {name} is {GPA}')
+        print('-----------------------------------------')
     else:        
         print('No student with that name found')
 #Fucntion to search the list of students by ID then update the GPA of the student
