@@ -75,15 +75,15 @@ def lookUpGPA(list):
     for student in (list):
         id = student.getID()
         if id == lookID:
-            GPA = student.getGPA()
+            gpa = student.getGPA()
             name = student.getName()
             found = True
     if found:
         print('-----------------------------------------')
-        print(f'The GPA for {name} is {GPA}')
+        print(f'The GPA for {name} is {gpa}')
         print('-----------------------------------------')
     else:        
-        print('No student with that name found')
+        print('No student with that ID found')
 #Fucntion to search the list of students by ID then update the GPA of the student
 def changeGPA(list):
     lookID = input('Please enter the ID of a student to change their GPA: ')
@@ -94,7 +94,7 @@ def changeGPA(list):
             student.setGPA()
             found = True
     if not found:
-        print('No student with that name found')
+        print('No student with that ID found')
 #Function to search the list of students by ID and update their expected grade        
 def changeExpect(list):
     lookID = input('Please enter the ID of a student to change their Expected Grade: ')
@@ -105,7 +105,7 @@ def changeExpect(list):
             student.setExpecGrade()
             found = True
     if not found:
-        print('No student with that name found')
+        print('No student with that ID found')
 
 #Function to print a table of students stored in the student list
 def displayData(list):
