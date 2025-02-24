@@ -13,8 +13,10 @@ MONTHNAMES = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 
 #main function
 def main():
+    date = ''
     #Get the date and slice out the month, day and year
-    date = input('Enter a date (mm/dd/yy): ')
+    while len(date) != 8:
+        date = input('Enter a date (mm/dd/yy): ')
     month = int(date[:2])
     day = int(date[3:5])
     year = int(date[6:])
