@@ -1,3 +1,5 @@
+#import statement for random
+import random
 #Main Game function
 def main():
     random_number = generateRandomNumber()
@@ -27,7 +29,6 @@ def main():
         print('Thank you for playing!')   
 #Generate Random Number
 def generateRandomNumber():
-    import random
     random_number = random.randint(1,1000)
     return random_number
 
