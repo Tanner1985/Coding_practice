@@ -3,6 +3,8 @@
 def main():
     #Grab some input to check
     truth = input('Enter True or False: ')
+    #Using a function directly as part of the if statement
+    #function returns True/False and the if block will trigger accordingly
     if isThisTrue(truth):
         thisWasTrue()
     else:
@@ -12,7 +14,8 @@ def main():
     number2 = float(input('Please Enter another number: '))
     #Print their total by using a function inside the print to add them
     print(addNumbers(number1, number2))
-    #Call a function to compair the numbers
+    #Call a function to compare the numbers instead of compareing them in the statement itself
+    #As the function returns True/False like isThisTrue it will trigger the if statement if True
     if compareNumber(number1, number2):
         print(f'{number1} is greater than {number2}')
 
@@ -27,13 +30,14 @@ def isThisTrue(isTrue):
 def addNumbers(number1, number2):
     total = number1 + number2
     return total
-#Simple function to check if a number is bigger than another, note different style from isThisTrue function but similar function
+#Function to check if a number is bigger than another
+#Returns the same values as isThisTrue, but directly instead of via a variable
 def compareNumber(num1, num2):
     if num1 > num2:
         return True
     else:
         return False
-#Simple Print functions
+#Print functions
 def thisWasFalse():
     print('That was false')
 
