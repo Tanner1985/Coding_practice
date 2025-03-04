@@ -14,6 +14,9 @@ def main():
     number2 = float(input('Please Enter another number: '))
     #Print their total by using a function inside the print to add them
     print(addNumbers(number1, number2))
+    #Grab the total then store it in a variable and print it, same function with inputs swapped stil returns
+    total = addNumbers(number2, number1)
+    print(total)
     #Call a function to compare the numbers instead of compareing them in the statement itself
     #As the function returns True/False like isThisTrue it will trigger the if statement if True
     if compareNumber(number1, number2):
