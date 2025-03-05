@@ -5,14 +5,8 @@ def main():
     firstLine = input('Type something you would like to put in a file: ')
     writeLineToFile(yourFile ,firstLine)
     readFile(yourFile)
-
-
-
-
-
-
-
-
+    searchLine = input('Enter a line you would like to search the file for: ')
+    findLine(yourFile, searchLine)
 
 
 
@@ -30,6 +24,7 @@ def writeLineToFile(fileName, line):
 def readFile(filename):
     with open (filename, 'r') as readingFile:
         print(readingFile.read())
+#Function to search for one line in a file and tell you if it's found
 def findLine(filename, line):
     with open (filename, 'r') as findLineFile:
         currentLine = findLineFile.readline()
