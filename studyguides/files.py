@@ -30,5 +30,15 @@ def writeLineToFile(fileName, line):
 def readFile(filename):
     with open (filename, 'r') as readingFile:
         print(readingFile.read())
+def findLine(filename, line):
+    with open (filename, 'r') as findLineFile:
+        currentLine = findLineFile.readline()
+        while line != currentLine or currentLine != '':
+            currentLine = findLineFile.readline()
+        if currentLine == line:
+            print('Line found in file!')
+        else:
+            print('Line not found in file')
+
 
 main()
