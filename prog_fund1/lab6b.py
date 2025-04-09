@@ -10,8 +10,8 @@ def main():
         writeValue = studentName + ' ' + str(studentGrade)
         writeToFile(writeValue, fileName)
     #Read the file and print the contents 
-    fileName = input('Please Enter the Filename you would like to check: ')           
-    readFile(fileName)
+    checkFileName = input('Please Enter the Filename you would like to check: ')           
+    readFile(checkFileName)
 #Function to get and return student name
 def getStudentName():
     studentName = input('Enter the student name: ')
