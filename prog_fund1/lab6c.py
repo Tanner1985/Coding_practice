@@ -106,8 +106,5 @@ def modifyData(fileName):
     newFile.close()
     os.remove(fileName)
     os.rename('temp.txt', fileName)
-
-    os.remove(fileName)
-    os.rename('temp.txt', fileName)
-
+#Call Main
 main()
