@@ -22,12 +22,12 @@ def main():
     studentTuple = tuple(studentList)
     print(studentTuple)
 
-
+#Function to write the list to a file
 def writeToFile(filename, input):
     with open(filename, 'a') as file:
         for item in input:
             file.write(item + '\n')
-
+#Function to read the file and print its contents
 def readFile(filename):
     with open(filename, 'r') as file:
         currentLine = file.readline()
