@@ -58,45 +58,55 @@ def totalPounds(fileName):
     return totalPounds
 #Function to remove data from file
 def removeData(fileName):
-    with open (fileName, 'r') as myFile, open ('temp.txt', 'w') as tempFil:
-        found = False
-        removeDesc = input('Enter the description to remove: ')
-        currentLine = myFile.readline()
-        while currentLine != '':
-            if removeDesc == currentLine:
-                found = True
-                currentLine = myFile.readline()
-                currentLine = myFile.readline()
-            else:
-                tempFil.write(currentLine)
-                currentLine = myFile.readline()
-        if found == True:
-            print('Item removed')
+    found = False
+    editFile = open (fileName, 'r')
+    newFile = open ('temp.txt', 'a')
+    currentLine = editFile.readline().rstrip('\n')
+    findLine = input('Please enter the description you would like to delete: ')
+    while currentLine != '':
+        if currentLine == findLine:
+            currentLine = editFile.readline().rstrip('\n')
+            currentLine = editFile.readline().rstrip('\n')
+            found = True
         else:
-            print('That item was not found in the file')
+            newFile.write(currentLine + '\n')
+            currentLine = editFile.readline().rstrip('\n')
+    if found:
+        print('The given description has been removed')
+    else:
+        print('The description given was not found')
+    editFile.close()
+    newFile.close()
     os.remove(fileName)
     os.rename('temp.txt', fileName)
 #Function to delete and replace data from file
 def modifyData(fileName):
-    with open (fileName, 'r') as myFile, open ('temp.txt', 'w') as tempFil:
-        found = False
-        deleteDesc = input('Enter the description to delete: ')
-        currentLine = myFile.readline()
-        while currentLine != '':
-            if deleteDesc == currentLine:
-                found = True
-                currentLine = myFile.readline()
-                currentLine = myFile.readline()
-            else:
-                tempFil.write(currentLine)
-                currentLine = myFile.readline()
-        if found == True:
-            print('Item deleted')
-            newName = input('Enter the new name: ')
-            newQuantity = input('Enter the new quantity: ')
-            tempFil.write(newName + '\n' + newQuantity + '\n')
+    found = False
+    editFile = open (fileName, 'r')
+    newFile = open ('temp.txt', 'a')
+    currentLine = editFile.readline().rstrip('\n')
+    findLine = input('Please enter the description you would like to replace: ')
+    while currentLine != '':
+        if currentLine == findLine:
+            currentLine = editFile.readline().rstrip('\n')
+            currentLine = editFile.readline().rstrip('\n')
+            found = True
         else:
-            print('That item was not found in the file')
+            newFile.write(currentLine + '\n')
+            currentLine = editFile.readline().rstrip('\n')
+    if found:
+        print('The given description has been removed')
+        description = input('Please Enter a new description to add to the list: ')
+        amount = input('Please enter an amount for the new description: ')
+        newFile.write(description + '\n')
+        newFile.write(amount + '\n')
+    else:
+        print('The description given was not found')
+    editFile.close()
+    newFile.close()
+    os.remove(fileName)
+    os.rename('temp.txt', fileName)
+
     os.remove(fileName)
     os.rename('temp.txt', fileName)
 
