@@ -1,8 +1,13 @@
 import networkscan
 import portscan
 import apirequester
+import os
+import sys
 
 def main():
+    if os.geteuid() !=0:
+        print('Must be a sudo user')
+        sys.exit(1)
     choice = 0
     print('Please pick an option')
     print('1: Network Scanner, scan an IP range for devices')
