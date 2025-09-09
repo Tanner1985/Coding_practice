@@ -1,6 +1,6 @@
 import requests
 
-def main():
+def apiRequest():
     endpoint = input('Please enter the API endpoint to request: ')
     response = requests.get(endpoint)
     if response.status_code == 200:
@@ -14,5 +14,3 @@ def saveData(data):
     with open("jsonoutput.txt", 'a') as file:
         for line in data:
             file.write(str(line) + '\n')
-
-main()

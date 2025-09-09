@@ -1,6 +1,6 @@
 import scapy.all as scapy
 
-def main():
+def netScan():
     network = input('Please Enter the Network to scan: ')
     request = scapy.ARP()
 
@@ -13,5 +13,3 @@ def main():
     clients = scapy.srp(request_broadcast, timeout = 1)[0]
     for element in clients:
         print(element[1].psrc + "      " + element[1].hwsrc)
-
-main()

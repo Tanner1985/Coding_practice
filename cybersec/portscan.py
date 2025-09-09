@@ -1,5 +1,5 @@
 import socket
-def main():
+def portScan():
     target = input('Please input target host: ')
     portStart = int(input('Please input the start of the port range: '))
     portEnd = int(input('Please enter the end of the port range: '))
@@ -15,6 +15,3 @@ def scan_ports(target, startPort, endPort):
         sock.close()
     if not openport:
         print('No open ports found')
-
-
-main()
