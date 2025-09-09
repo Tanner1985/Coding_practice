@@ -3,11 +3,12 @@ import portscan
 import apirequester
 import os
 import sys
+import subprocess
 
 def main():
     if os.geteuid() !=0:
-        print('Must be a sudo user')
-        sys.exit(1)
+        print('Must be a sudo user, switching')
+        runSudo()
     choice = 0
     print('Please pick an option')
     print('1: Network Scanner, scan an IP range for devices')
@@ -24,5 +25,8 @@ def main():
     else:
         print('Invalid option given')
 
+def runSudo():
+    args = ['sudo', 'python3'] + sys.argv
+    os.execvp('sudo', args)
 
 main()
