@@ -5,9 +5,9 @@ def main():
     response = requests.get(endpoint)
     if response.status_code == 200:
         print('Data received')
-        data= response.json()
+        data = response.json()
     else:
-        print('Failed to retrieve data')
+        print('No data found')
     saveData(data)
 
 def saveData(data):
