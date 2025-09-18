@@ -28,7 +28,7 @@ def netScanSave():
     startPort = int(input('Please enter the start of the port range to scan for each machine: '))
     endPort = int(input('Please enter the end of the port range to scan for each machine: '))
     for element in networkToScan:
-        numProcesses = 16
+        numProcesses = 64
         with multiprocessing.Pool(processes=numProcesses) as pool:
             p = pool.map(autoNetScan, str(element),)
             processes.append(p)
