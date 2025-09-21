@@ -10,7 +10,8 @@ class Machine:
     def setMAC(self, MAC):
         self.__MAC = MAC
     def setOpenPorts(self, ports):
-        self.__openPorts.append(ports)
+        if ports not in self.__openPorts:
+            self.__openPorts.append(ports)
     def getIP(self):
         return self.__IP
     def getMAC(self):
