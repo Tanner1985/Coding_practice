@@ -13,7 +13,8 @@ def main():
     choice = getChoice()
     while choice !=0:
         if choice == 1:
-            networkscan.netScan()
+            network = input('Please Enter the Network to scan: ')
+            networklist = networkscan.netScan(network)
             choice = getChoice()
         elif choice == 2:
             portscan.portScan()
@@ -22,10 +23,18 @@ def main():
             apirequester.apiRequest()
             choice = getChoice()
         elif choice == 4:
-            networkList = networkscan.netScanSave()
+            network = input('Please Enter the Network to scan: ')
+            networkList = networkscan.netScan(network)
             print(networkList)
-            for machine in networkList:
-                print(f'Machine {machine.getIP()} has these open ports: {machine.getOpenPorts()}')
+            startPort = int(input('Please enter the starting port number to scan: '))
+            endPort = int(input('Please enter the ending port number to scan: '))
+            for client in networkList:
+                ip = client[1].psrc
+                mac = client[1].hwsrc
+                newMachine = networkscan.createNewMachine(ip, mac)
+                print(f'Scanning {ip} for open ports from {startPort} to {endPort}')
+                newMachine.scanPorts(startPort, endPort)
+                print(f'Open ports for {ip} are: {newMachine.getOpenPorts()}')
             choice = getChoice()
         else:
             print('Invalid option given')
