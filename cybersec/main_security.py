@@ -26,14 +26,12 @@ def main():
             network = input('Please Enter the Network to scan: ')
             networkList = networkscan.netScan(network)
             print(networkList)
-            startPort = int(input('Please enter the starting port number to scan: '))
-            endPort = int(input('Please enter the ending port number to scan: '))
             for client in networkList:
                 ip = client[1].psrc
                 mac = client[1].hwsrc
-                newMachine = networkscan.createNewMachine(ip, mac)
-                print(f'Scanning {ip} for open ports from {startPort} to {endPort}')
-                newMachine.scanPorts(startPort, endPort)
+                newMachine = createNewMachine(ip, mac)
+                print(f'Scanning {ip} for unsecure ports')
+                newMachine.scanUnsecurePorts()
                 print(f'Open ports for {ip} are: {newMachine.getOpenPorts()}')
             choice = getChoice()
         else:
@@ -56,5 +54,8 @@ def getChoice():
     print('---------------------------')
     choice = int(input('Type your number of choice here: '))
     return choice
+
+def createNewMachine(IP, MAC):
+    return machine.Machine(IP, MAC)
 
 main()
