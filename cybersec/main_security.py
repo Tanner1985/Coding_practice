@@ -27,12 +27,13 @@ def main():
             networkList = networkscan.netScan(network)
             print(networkList)
             for client in networkList:
-                ip = client[1].psrc
-                mac = client[1].hwsrc
-                newMachine = createNewMachine(ip, mac)
-                print(f'Scanning {ip} for unsecure ports')
-                newMachine.scanUnsecurePorts()
-                print(f'Open ports for {ip} are: {newMachine.getOpenPorts()}')
+                for item in client:
+                    ip = item[1].psrc
+                    mac = item[1].hwsrc
+                    newMachine = createNewMachine(ip, mac)
+                    print(f'Scanning {ip} for unsecure ports')
+                    newMachine.scanUnsecurePorts()
+                    print(f'Open ports for {ip} are: {newMachine.getOpenPorts()}')
             choice = getChoice()
         else:
             print('Invalid option given')

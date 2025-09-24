@@ -13,8 +13,10 @@ def netScan(network):
 
         request_broadcast = broadcast / request
         clients.append(scapy.srp(request_broadcast, timeout = 1)[0])
-    for element in clients:
-        print(element[1].psrc + "      " + element[1].hwsrc)
+        for element in clients:
+            print (element)
+            for item in element:
+                print(item[1].psrc + "      " + item[1].hwsrc)
     return clients
 #Scanner that returns a list of objects with IP and MAC info from the scan
 
