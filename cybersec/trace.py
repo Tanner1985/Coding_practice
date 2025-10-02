@@ -2,7 +2,7 @@
 import scapy.all as scapy
 import graphviz
 
-def main():
+def multiTrace():
     traceList = []
     moreTrace = 'Y'
     while moreTrace != 'N':
@@ -11,6 +11,4 @@ def main():
         moreTrace = input('Would you like to add more sites to trace? Y or N: ')
         moreTrace.upper()
     res, unans = scapy.traceroute(traceList, dport=[80,443],maxttl=20,retry=-2)
-    res.graph()
-
-main()
+    res.graph(target = 'Graph')

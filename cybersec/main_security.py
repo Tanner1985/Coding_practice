@@ -1,4 +1,5 @@
 import networkscan
+import trace
 import portscan
 import platform
 import apirequester
@@ -58,6 +59,9 @@ def main():
             network = input('Please Enter the Network to scan: ')
             networkList = networkscan.UDPping(network)
             choice = getChoice()
+        elif choice == 10:
+            trace.multiTrace()
+            choice = getChoice()
         else:
             print('Invalid option given')
             choice = getChoice()
@@ -80,6 +84,7 @@ def getChoice():
     print('7: Scan a network using arping')
     print('8: ARP scan with specific MAC input')
     print('9: Scan using UDP')
+    print('10: Trace route and print to graph')
     print('---------------------------')
     choice = int(input('Type your number of choice here: '))
     return choice
