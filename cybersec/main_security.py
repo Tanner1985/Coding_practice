@@ -1,5 +1,6 @@
 import networkscan
 import portscan
+import platform
 import apirequester
 import os
 import sys
@@ -7,9 +8,10 @@ import subprocess
 import machine
 #This is the main module that elevates permissions and orginizes the flow of information
 def main():
-    ##if os.geteuid() !=0:
-        ##print('Must be a sudo user, switching')
-        ##runSudo()
+    if platform.system() == "Linux":
+        if os.geteuid() != 0:
+            print('Must be a sudo user, switching')
+            runSudo()
     choice = getChoice()
     while choice !=0:
         if choice == 1:
